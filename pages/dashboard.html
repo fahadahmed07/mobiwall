@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="../assets/js/sweetalert2.js"></script>
+    
+    <title>MobiWall | Download HD Wallpapers For Smartphones</title>
+  </head>
+  <body class="cust-backgroud">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 mx-auto my-5 text-white text-center">
+          <h1 class="h1">Comming Soon</h1>
+          <p>Our website is under construction. Please come back later.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 mx-auto px-0 text-center">
+          <ul id="countDownList">
+            <li class="bg-white mx-2 p-2 rounded">
+              <strong><p class="conutNum text-secondary" id="countDays"></p></strong>
+              <p class="conutText text-secondary text-uppercase">Days</p>
+            </li>
+            <li class="bg-white mx-2 p-2 rounded">
+              <strong><p class="conutNum text-secondary" id="countHours"></p></strong>
+              <p class="conutText text-secondary text-uppercase">Hours</p>
+            </li>
+            <li class="bg-white mx-2 p-2 rounded">
+              <strong><p class="conutNum text-secondary" id="countMinutes"></p></strong>
+              <p class="conutText text-secondary text-uppercase">Minutes</p>
+            </li>
+            <li class="bg-white mx-2 p-2 rounded">
+              <strong><p class="conutNum text-secondary" id="countSeconds"></p></strong>
+              <p class="conutText text-secondary text-uppercase">Seconds</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // xxxxxxxxxx Count Down Timer xxxxxxxxxx
+      var setDate = new Date("Dec 31, 2018 00:00:00").getTime();
+      var xInterval = setInterval(function(){
+          var currentDate = new Date().getTime();
+          var difference = setDate - currentDate;
+          var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+          if(days < 10){
+              document.getElementById("countDays").innerHTML = "0"+ days;
+          }else{
+              document.getElementById("countDays").innerHTML = days;
+          }
+          if(hours < 10){
+              document.getElementById("countHours").innerHTML = "0"+ hours;
+          }else{
+              document.getElementById("countHours").innerHTML = hours;
+          }
+          if(minutes < 10){
+              document.getElementById("countMinutes").innerHTML = "0"+ minutes;
+          }else{
+              document.getElementById("countMinutes").innerHTML = minutes;
+          }
+          if(seconds < 10){
+              document.getElementById("countSeconds").innerHTML = "0"+ seconds;
+          }else{
+              document.getElementById("countSeconds").innerHTML = seconds;
+          }
+          if(difference < 0){
+              clearInterval(xInterval);
+          }
+        }, 1000)
+    </script>
+    
+    <!-- Main App JavaScript -->
+    <script src="../assets/js/main-app.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
